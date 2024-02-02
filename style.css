@@ -283,8 +283,10 @@ input:checked + .slider + .mode-text {
   }
   .text-on-image {
 	position: absolute;
-	top: 35%;
-	left: 50%;
+	top: 40%; 
+     left: 50%; 
+     right: -32%; 
+    text-align: justify;
 	transform: translate(-50%, -50%);
 	color: white; /* Optional: Set the text color */
 	font-weight: bold; /* Optional: Set the font weight */
