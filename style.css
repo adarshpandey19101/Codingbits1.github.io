@@ -14,7 +14,7 @@ a {
 	text-decoration: none;
 }
 .container {
-	min-height: 100vh;
+	/* min-height: 100vh; */
 	width: 100%;
 	display: flex;
 	align-items: center;
@@ -38,7 +38,7 @@ p {
 	font-size: 4rem;
 	font-weight: 300;
 	color: black;
-	margin-bottom: 10px;
+	margin-bottom: 100px;
 	text-transform: uppercase;
 	letter-spacing: 0.2rem;
 	text-align: center;
@@ -72,153 +72,194 @@ p {
 .brand h1 span {
 	color: crimson;
 }
+/* .dark .dark\:bg-dark{
+	--tw-bg-opacity: 1;
+	background-color: rgb(17 23 34 / var(--tw-bg-opacity));
+  } */
 
 /* Header section */
 #header {
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: auto;
-  background-color: rgba(31, 30, 30, 0.24);
-  transition: 0.3s ease background-color;
-}
-
-#header.transparent {
-  background-color: rgba(255, 255, 255, 0); /* Transparent background */
-}
-
-.logo {
-  width: 130px;
-  height: 110px;
-  /* Add any additional styles as needed */
-}
-
-#header .header {
-  min-height: 8vh;
-  transition: 0.3s ease background-color;
-}
-#header .nav-bar {
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: auto;
+	background-color: rgb(41, 50, 60);	
+	transition: 0.3s ease background-color;
+	font-family: 'Arial', sans-serif;
+  }
+  
+  /* #header.transparent {
+	background-color: rgba(255, 255, 255, 0); /* Transparent background */
+  /*} */
+  
+  .logo {
+	width: 130px;
+	height: 110px;
+	/* Add any additional styles as needed */
+  }
+  
+  #header .header {
+	min-height: 8vh;
+	transition: 0.3s ease background-color;
+  }
+  
+  #header .nav-bar {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	width: 100%;
 	height: 100%;
 	max-width: 1300px;
-	padding: 0 10px;
-}
+	padding: 15px;
+  }
 
-#header .nav-list ul {
-  background-color: rgb(31, 30, 30);
-  width: 100vw;
-  height: 100vh;
-  left: 100%;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-  overflow-x: hidden;
-  transition: 0.5s ease left;
-}
-
-#header .nav-list ul.active {
-  left: 0%;
-}
-
-/* Rest of your existing styles... */
-
-#header .nav-list ul a {
-	font-size: 2.5rem;
-	font-weight: 500;
-	letter-spacing: 0.2rem;
+  #header .nav-list{
+	display: flex;
+	justify-content: space-around;
+	width: 60%;
+  }
+  
+  #header .nav-list  a {
 	text-decoration: none;
 	color: white;
-	text-transform: uppercase;
+	font-size: 1.5rem;
 	font-weight: bold;
-	padding: 20px;
-	display: block;
-}
-#header .nav-list ul a::after {
-	content: attr(data-after);
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%) scale(0);
-	color: rgba(240, 248, 255, 0.021);
-	font-size: 13rem;
-	letter-spacing: 50px;
-	z-index: -1;
-	transition: 0.3s ease letter-spacing;
-}
-#header .nav-list ul li:hover a::after {
-	transform: translate(-50%, -50%) scale(1);
-	letter-spacing: initial;
-}
-#header .nav-list ul li:hover a {
-	color: crimson;
-}
-#header .hamburger {
-	height: 60px;
-	width: 60px;
-	display: inline-block;
-	border: 3px solid white;
-	border-radius: 50%;
-	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	z-index: 100;
-	cursor: pointer;
-	transform: scale(0.8);
-	margin-right: 20px;
-}
-#header .hamburger:after {
-	position: absolute;
-	content: '';
-	height: 100%;
-	width: 100%;
-	border-radius: 50%;
-	border: 3px solid white;
-	animation: hamburger_puls 1s ease infinite;
-}
-#header .hamburger .bar {
-	height: 2px;
-	width: 30px;
-	position: relative;
-	background-color: white;
-	z-index: -1;
-}
-#header .hamburger .bar::after,
-#header .hamburger .bar::before {
-	content: '';
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	left: 0;
-	background-color: white;
-	transition: 0.3s ease;
-	transition-property: top, bottom;
-}
-#header .hamburger .bar::after {
-	top: 8px;
-}
-#header .hamburger .bar::before {
-	bottom: 8px;
-}
-#header .hamburger.active .bar::before {
-	bottom: 0;
-}
-#header .hamburger.active .bar::after {
-	top: 0;
-}
-/* End Header section */
+	    font-family: 'Montserrat', sans-serif;
 
-/* about-us Section */
-/* About Us Section Styles */
-/* Add this CSS to your style.css file */
+  }
+
+  #header.nav-list a:hover {
+    color: #ffd700;
+}
+  
+  #header .hamburger {
+	display: none;
+	flex-direction: column;
+	cursor: pointer;
+  }
+  
+  #header .bar {
+	height: 5px;
+	width: 30px;
+	background-color: white;
+	z-index: -1;
+	margin: 6px 0;
+  }
+  
+
+  @media screen and (max-width: 768px) {
+    #header .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+    }
+
+    #header .nav-list a {
+        padding: 15px;
+        text-align: center;
+        width: 100%;
+        display: block;
+    }
+
+    #header .hamburger {
+        display: flex;
+    }
+}
+
+/* Existing CSS code */
+
+/* Add the following styles for light and dark themes */
+
+body.dark-theme {
+    --tw-bg-opacity: 1;
+	background-color: rgb(17 23 34 / var(--tw-bg-opacity));
+    color: #fff;
+}
+
+body.light-theme {
+    background-color: #fff;
+    color: #333;
+}
+
+.theme-toggle {
+    /* margin-left: auto; */
+    padding-right: 20px;
+	display: flex;
+    align-items: center;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+}
+
+.mode-text {
+	visibility: hidden;
+    margin-left: 10px;
+    font-size: 14px;
+    color: #ccc; /* Color for the mode text */
+}
+
+input:checked + .slider + .mode-text {
+    visibility: visible; /* Show the mode text when the toggle is checked */
+}
+/* End of new styles for light and dark themes */
+
+
+  /* End Header section */
+  
 
 /* About Us Section */
 #about-us {
@@ -242,12 +283,12 @@ p {
   }
   .text-on-image {
 	position: absolute;
-	top: 50%;
+	top: 35%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	color: white; /* Optional: Set the text color */
 	font-weight: bold; /* Optional: Set the font weight */
-	font-size: large;
+	font-size: medium;
 	z-index: 1; /* Ensure the text is above the image */
   }
 
@@ -258,36 +299,38 @@ p {
 	border-radius: 10px; /* Optional: Add rounded corners to the image */
   }
   
-  
-  
 /* End about-us Section */
 
-/* mission Section */
-#mission{
+/* Our Values Section */
+#mission {
 	padding: 10px 0;
 	padding-bottom: 20px;
-}
-.mission {
-	flex-direction: column;
+  }
+  
+  .mission {
+	flex-direction: row; /* Default to row layout for desktop */
 	text-align: center;
 	max-width: 1500px;
 	margin: 0 auto;
-	padding: 10px 0;
-}
-.vision-top {
+	/* padding: 10px 0; */
+  }
+  
+  .vision-top {
 	max-width: 700px;
 	margin: 0 auto;
-	padding: 10px;
-}
-.vision-bottom {
+	/* padding: 10px; */
+  }
+  
+  .vision-bottom {
 	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-wrap: wrap;
-	margin-top: 30px;
-}
-.vision-item {
-	flex-basis: 80%;
+	align-items: center; /* Center vertically for both desktop and mobile */
+	justify-content:center; /* Add space between mission and vision items */
+	/* margin-top: 30px; */
+	flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+  }
+  
+  .vision-item {
+	flex-basis: calc(40% - 20px); /* Adjust the width to leave space between items */
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
@@ -296,12 +339,13 @@ p {
 	border-radius: 10px;
 	background-image: url(./img/img-1.png);
 	background-size: cover;
-	margin: 10px 5%;
+	margin: 10px 0; /* Adjust margin to create space between items */
 	position: relative;
 	z-index: 1;
 	overflow: hidden;
-}
-.vision-item::after {
+  }
+  
+  .vision-item::after {
 	content: '';
 	position: absolute;
 	left: 0;
@@ -311,25 +355,44 @@ p {
 	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
 	opacity: 0.9;
 	z-index: -1;
-}
-.vision-bottom .icon {
+  }
+  
+  .vision-bottom .icon {
 	height: 80px;
 	width: 80px;
 	margin-bottom: 20px;
-}
-.vision-item h2 {
+  }
+  
+  .vision-item h2 {
 	font-size: 2rem;
 	color: white;
 	margin-bottom: 10px;
 	font-weight: bold;
 	text-transform: uppercase;
-}
-.vision-item p {
+  }
+  
+  .vision-item p {
 	color: white;
 	text-align: left;
+  }
+  
+  /* Media Query for Mobile View */
+  @media (max-width: 1200px) {
+	.vision-bottom {
+	  flex-direction: column;
+	}
+  
+	.vision-item {
+	  flex-basis: 100%;
+	  margin: 10px 0; /* Adjust margin for better spacing on mobile */
+	}
+  }
+  
+  @media (max-width: 1200px) {
+.container{
+	flex-direction: column;
+}  
 }
-/* End mission Section */
-
 /* Projects section */
 #projects{
 	padding: 20px;
@@ -409,23 +472,29 @@ p {
 /* Add this CSS to your style.css file or in a <style> tag in the head of your HTML document */
 
 /* Team Section */
-#team {
-    background-color: #f8f8f8;
+
     /* padding: 80px 0; */
-}
+		/* --tw-bg-opacity: 1;
+		background-color: rgb(17 23 34 / var(--tw-bg-opacity)); */
+	  
+
 
 .team {
     text-align: center;
+	--tw-bg-opacity: 1;
+		background-color: rgb(17 23 34 / var(--tw-bg-opacity));
 }
 
 .team h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
+	color: white;
 }
 
 .team h2 {
     font-size: 1.8em;
     margin-bottom: 15px;
+	color: chartreuse;
 }
 
 .team-member {
@@ -468,9 +537,7 @@ p {
 /* End Team Section */
 
 /* contact Section */
-/* #contact{
-	padding: 10px;
-} */
+
 #contact .contact {
 	flex-direction: column;
 	max-width: 1200px;
@@ -480,6 +547,10 @@ p {
 #contact .contact-items {
 	/* max-width: 400px; */
 	width: 100%;
+	display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
 }
 #contact .contact-item {
 	width: 80%;
@@ -494,7 +565,10 @@ p {
 	flex-direction: column;
 	box-shadow: 0px 0px 18px 0 #0000002c;
 	transition: 0.3s ease box-shadow;
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    opacity: 0.9;
 }
+
 #contact .contact-item:hover {
 	box-shadow: 0px 0px 5px 0 #0000002c;
 }
@@ -505,13 +579,15 @@ p {
 }
 #contact .contact-info h1 {
 	font-size: 2.5rem;
-	font-weight: 500;
+	font-weight: bold;
 	margin-bottom: 5px;
+	color: white;
 }
 #contact .contact-info h2 {
 	font-size: 1.3rem;
 	line-height: 2rem;
 	font-weight: 500;
+	color: aqua;
 }
 /*End contact Section */
 
@@ -556,16 +632,7 @@ p {
 /* End Footer */
 
 /* Keyframes */
-@keyframes hamburger_puls {
-	0% {
-		opacity: 1;
-		transform: scale(1);
-	}
-	100% {
-		opacity: 0;
-		transform: scale(1.4);
-	}
-}
+
 @keyframes text_reveal_box {
 	50% {
 		width: 100%;
@@ -632,6 +699,7 @@ p {
 	/* team */
 	#team .team {
 		flex-direction: row;
+		/* padding: 100px 0; */
 	}
 	#team .col-left {
 		width: 600px;
@@ -688,38 +756,13 @@ p {
 	}
 	/* End contact  */
 }
-/* End Media Query For Tablet */
 
-/* Media Query For Desktop */
-@media only screen and (min-width: 50px) {
-	/* header */
-	#header .hamburger {
-		display: none;
-	}
-	#header .nav-list {
-		max-width: 100%; /* Adjust as needed */
-	 }
-	#header .nav-list ul {
-		position: initial;
-		display: block;
-		height: auto;
-		width: fit-content;
-		background-color: transparent;
-	}
-	#header .nav-list ul li {
-		display: inline-block;
-	}
-	#header .nav-list ul li a {
-		font-size: 1.8rem;
-	}
-	#header .nav-list ul a:after {
-		display: none;
-	}
-	/* End header */
+
+
+	
 
 	#mission .vision-bottom .vision-item {
 		flex-basis: 22%;
 		margin: 1.5%;
 	}
-}
-/* End  Media Query For Desktop */
+
