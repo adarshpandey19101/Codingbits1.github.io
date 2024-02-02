@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <title>Coding Bits</title>
 </head>
@@ -11,31 +11,43 @@
 <body>
   <!-- Header -->
   <section id="header">
-    <div class="header container">
+    
       <div class="nav-bar">
         <div class="brand">
           <a href="#about-us">
             <img src="./CB-LOGO.jpg"alt="Coding Bits" class="logo">
           </a>
         </div>
-        <div class="nav-list">
+
             <div class="hamburger" onclick="toggleNav()">
               <div class="bar"></div>
               <div class="bar"></div>
               <div class="bar"></div>
-              <div class="bar"></div>
-              <div class="bar"></div>
             </div>
-            <ul id="nav-list">
-              <li><a href="#about-us" data-after="Home">About Us</a></li>
-              <li><a href="#mission" data-after="vision">Our Values</a></li>
-              <li><a href="#projects" data-after="Projects">Our Services</a></li>
-              <li><a href="#team" data-after="team">OUR TEAM</a></li>
-              <li><a href="#contact" data-after="Contact">Contact Us</a></li>
-            </ul>
-        </div>
+            
+            <div class="nav-list" id="navList">
+              <a href="#about-us" data-after="Home">About Us</a>
+              <a href="#mission" data-after="vision">Our Values</a>
+              <a href="#projects" data-after="Projects">Our Services</a>
+              <a href="#team" data-after="team">Our Team</a>
+              <a href="#contact" data-after="Contact">Contact Us</a>
+
+
+
+              
+
+
+
+        <div class="theme-toggle">
+          <label class="switch">
+              <input type="checkbox" id="themeToggle" onclick="toggleTheme()">
+              <span class="slider round"></span>
+          </label>
+          <span class="mode-text">(Light/Dark Mode)</span>
+
+          </div>
       </div>
-    </div>
+      </div>
   </section>
   <!-- End Header -->
 
@@ -43,13 +55,12 @@
   <!-- about-us Section  -->
   <!-- About Us Section -->
 <section id="about-us">
-    <h1 class="section-title">About <span>Us</span></h1>
     <div class="about-us container">
       <div class="about-us-img">
         <img src="./Mw.gif" alt="About Us Image">
       
         
-        <p class="text-on-image">Welcome to Coding Bits – your gateway to IT excellence. We specialize in comprehensive industrial training and innovative e-learning, crafting industry-relevant curricula with experienced instructors. With industry-relevant programs, experienced instructors, and advanced workshops, Coding Bits ensures you're equipped for success. Join our transformative community where each bit of knowledge propels you toward a thriving IT career.</p>
+        <p class="text-on-image">Welcome to Coding Bits – your gateway to IT excellence. We specialize in comprehensive industrial training and innovative e-learning, crafting industry-relevant curricula with experienced instructors. With industry-relevant programs, experienced instructors, and advanced workshops, Coding Bits ensures you're equipped for success.</p>
       </div>
     </div>
   </section>
@@ -202,7 +213,7 @@
   <section id="footer">
     <div class="footer container">
       <div class="brand">
-        <h1><span>A</span>darsh <span>K</span>umar<span> P</span>andey</h1>
+        <h1><span>C</span>OD<span>I</span>NG<span> B</span>ITS</h1>
       </div>
       <div class="social-icon">
         <div class="social-item">
